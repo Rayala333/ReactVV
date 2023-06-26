@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import { useCallback, useState } from 'react';
 import './App.css';
+// import Header from './components/header/Header';
+import Myfile from './component/Myfile';
+import Myfile2 from './component/Myfile2';
+import Myfile3 from './component/Myfile3';
+
 
 function App() {
+  const [state,setState]=useState(0)
+  const [count,setCount]=useState(0)
+  // console.log('App')
+  const clickHandler = ()=>{
+    setState((e)=>e+1)
+    console.log("app")
+  }
+  const myfun = useCallback(()=>{
+    setCount((pre)=>pre+1)
+    // console.log("count")
+  },[]) 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Header/> */}
+      <Myfile/>   <br/><hr/>
+      {state}<br/>
+      <button onClick={clickHandler}>ClickApp</button><br/><hr/>
+      <Myfile2/><br></br><hr/>
+      <Myfile3 count={count} myfun={myfun}/>
+       </>
   );
 }
 
