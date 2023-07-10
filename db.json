@@ -1,0 +1,121 @@
+{
+  "countries": [
+    {
+      "id": "1",
+      "name": "United States",
+      "states": [
+        {
+          "id": "1",
+          "name": "California",
+          "districts": [
+            {
+              "id": "1",
+              "name": "Los Angeles"
+            },
+            {
+              "id": "2",
+              "name": "San Francisco"
+            },
+            {
+              "id": "3",
+              "name": "San Diego"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Texas",
+          "districts": [
+            {
+              "id": "4",
+              "name": "Houston"
+            },
+            {
+              "id": "5",
+              "name": "Austin"
+            },
+            {
+              "id": "6",
+              "name": "Dallas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "India",
+      "states": [
+        {
+          "id": "3",
+          "name": "Andhra Pradesh",
+          "districts": [
+            {
+              "id": "7",
+              "name": "Vijayawada"
+            },
+            {
+              "id": "8",
+              "name": "Guntur"
+            },
+            {
+              "id": "9",
+              "name": "Tirupati"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "name": "Telangana",
+          "districts": [
+            {
+              "id": "10",
+              "name": "Khammam"
+            },
+            {
+              "id": "11",
+              "name": "Hyd"
+            },
+            {
+              "id": "12",
+              "name": "Ktd"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "userdata": [
+    {
+      "name": "Prasad",
+      "password": "Prasad@123",
+      "confirmPassword": "Prasad@123",
+      "email": "chaitanyarayala321@gmail.com",
+      "address": "1/6",
+      "country": "India",
+      "state": "Telangana",
+      "district": "Khammam",
+      "pincode": "504234",
+      "acceptTerms": true,
+      "hobbies": "Sleeping",
+      "id": 2
+    },
+    {
+      "name": "Prasad",
+      "password": "Prasad@123",
+      "confirmPassword": "Prasad@123",
+      "email": "rayalaprasad.369@gmail.com",
+      "address": "12",
+      "country": "United States",
+      "state": "California",
+      "district": "Los Angeles",
+      "hobbies": [
+        "Reading",
+        "badmintion"
+      ],
+      "pincode": "654344",
+      "acceptTerms": true,
+      "id": 3
+    }
+  ]
+}

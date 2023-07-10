@@ -1,34 +1,38 @@
-import { useCallback, useState } from 'react';
+import React, { createContext, useState } from 'react';
+
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import {BrowserRouter} from 'react-router-dom'
+
 import './App.css';
-// import Header from './components/header/Header';
-import Myfile from './component/Myfile';
-import Myfile2 from './component/Myfile2';
-import Myfile3 from './component/Myfile3';
 
+export const store = createContext()
 
-function App() {
-  const [state,setState]=useState(0)
-  const [count,setCount]=useState(0)
-  // console.log('App')
-  const clickHandler = ()=>{
-    setState((e)=>e+1)
-    console.log("app")
-  }
-  const myfun = useCallback(()=>{
-    setCount((pre)=>pre+1)
-    // console.log("count")
-  },[]) 
+const App = () => {
+  const [storeData,setstoreData]=useState(false)
 
   return (
-    <>
-      {/* <Header/> */}
-      <Myfile/>   <br/><hr/>
-      {state}<br/>
-      <button onClick={clickHandler}>ClickApp</button><br/><hr/>
-      <Myfile2/><br></br><hr/>
-      <Myfile3 count={count} myfun={myfun}/>
-       </>
-  );
+
+    <store.Provider value={[storeData,setstoreData]}>
+
+      <div class="container-fluid vh-100 ">
+      <BrowserRouter>
+        <div class="row"><Header/></div>
+
+        <div className='row '><Main/></div>
+
+        <div className='row fixed-bottom'><Footer/></div>
+      </BrowserRouter>
+      </div>
+
+    </store.Provider>
+
+  )
+
 }
 
-export default App;
+
+
+
+export default App
