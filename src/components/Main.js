@@ -5,6 +5,7 @@ import Home from './Home';
 import Regster from './Regster';
 import Login from './Login';
 import Landing from '../newcomponent/Landing';
+import NewLanding from '../newcomponent/NewLanding';
 import { Route,Routes  } from 'react-router-dom';
 
 const Main = () => {
@@ -17,6 +18,7 @@ const Main = () => {
             <Route path='/registration' element={<Regster/>}></Route>
             <Route path='/' element={<Login/>}></Route>
             <Route path='/landing' element={<Landing/>}></Route>
+            <Route path='/newLanding' element={<NewLanding/>}></Route>
         </Routes>
    
   )

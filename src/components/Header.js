@@ -16,7 +16,7 @@ const Header = () => {
                 <div className='navbar'>
                 
                 {
-                  storeData &&<>
+                  storeData===true &&<>
                     <Link to='/Home' className="NavLink" >Home</Link>
 
                     <Link to='/Country' className="NavLink" >Country</Link>

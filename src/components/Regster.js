@@ -72,7 +72,7 @@ const Regster = () => {
                     setFieldValue('district', '');
                 };
     
-      const validationSchema = Yup.object().shape({
+      const validationSchema = Yup.object({
 
             name: Yup.string().required('Name is required'),
     
@@ -233,6 +233,7 @@ const Regster = () => {
                     <button type="submit" className="btn btn-primary mb-5 mt-1" disabled={isSubmitting}>
                         Submit
                     </button>
+                   
                     
                 </Form>
 

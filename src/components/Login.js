@@ -37,7 +37,8 @@ const Login = () => {
                     if(user){
                         alert("Loginsuccess")
                         setstoreData(true)
-                        navigate('/landing')
+                        // navigate('/landing')
+                        navigate('/newLanding')
                     }else{
                             alert("In vallid user email and password")
                     }

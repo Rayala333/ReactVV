@@ -90,30 +90,32 @@
       "name": "Prasad",
       "password": "Prasad@123",
       "confirmPassword": "Prasad@123",
-      "email": "chaitanyarayala321@gmail.com",
-      "address": "1/6",
+      "email": "rayalaprasad.369@gmail.com",
+      "address": "23",
       "country": "India",
-      "state": "Telangana",
-      "district": "Khammam",
-      "pincode": "504234",
+      "state": "Andhra Pradesh",
+      "district": "Vijayawada",
+      "hobbies": [
+        "Cricket",
+        "football"
+      ],
+      "pincode": "564323",
       "acceptTerms": true,
-      "hobbies": "Sleeping",
       "id": 2
     },
     {
-      "name": "Prasad",
-      "password": "Prasad@123",
-      "confirmPassword": "Prasad@123",
-      "email": "rayalaprasad.369@gmail.com",
-      "address": "12",
-      "country": "United States",
-      "state": "California",
-      "district": "Los Angeles",
+      "name": "Nani",
+      "password": "Nani@123",
+      "confirmPassword": "Nani@123",
+      "email": "prasad.rayala@hcl.com",
+      "address": "1/4",
+      "country": "India",
+      "state": "Telangana",
+      "district": "Khammam",
       "hobbies": [
-        "Reading",
-        "badmintion"
+        "Reading"
       ],
-      "pincode": "654344",
+      "pincode": "653636",
       "acceptTerms": true,
       "id": 3
     }

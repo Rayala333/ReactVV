@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const Landing = () => {
     const [state,setState]=useState([])
+    const [click,setClick]=useState(false)
 
     const [update,setUpdate]=useState({
         Name:'',
@@ -29,7 +30,7 @@ const Landing = () => {
     const editeHandler = (id)=>{
       const editdata =    state.filter((e,i)=>e.id===id)
 
-      console.log(editdata[0].name)
+      console.log(editdata)
     //   const data = editdata[0]
       setUpdate({
         Name:editdata[0].name,
@@ -84,6 +85,7 @@ const Landing = () => {
                     <div class="mb-3">
                         <label  class="form-label">Country</label>
                         <input type="text" class="form-control" name='country' value={update.Country} onChange={handleUpdate}  placeholder="Password"/>
+                        
                         {/* {error.Password && <span className='text-danger mt-1'>{error.Password}</span>} */}
                     </div>
                     <div class="mb-3">
@@ -118,14 +120,28 @@ const Landing = () => {
                         <tbody>
                                     {
                                     state &&  state.map((e,i)=>(
+                                        
                                             <tr key={i}>
                                                     <td>{i+1}</td>
-                                                    <td>{e.name}</td>
+                                                    {
+                                                        click ? (
+                                                            <>
+                                                            <td>{e.name}</td>
                                                     <td>{e.email}</td>
                                                     <td>{e.country}</td>
                                                     <td>{e.state}</td>
                                                     <td onClick={()=>{editeHandler(e.id)}} ><i className="bi bi-pencil-square"></i></td>
                                                     <td onClick={()=>{deleteHandler(e.id)}}><i className="bi bi-trash3"></i></td>
+                                                    </> ):(
+                                                        <>
+                                                            <td><input type='text' /></td>
+                                                            <td><input type='text' /></td>
+                                                            <td><input type='text' /></td>
+                                                            <td><input type='text' /></td>
+                                                        </>
+                                                    )
+                                                    }
+                                                    
                                             </tr>
                                         ))
                                     }
